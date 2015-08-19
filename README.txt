@@ -105,7 +105,8 @@ brooklynRoutingAlgorithm.js
 				carID = the ID of the car to be removed
 				floor = floor of lotID
 		moveToElevator(floor)
-		
+			this function selects an elevator and drops whatever the shuttle is holding into the elevator and sends it to the given floor
+				floor = the floor that the cargo on the shuttle will be moved to
 
 --------------------------------------------------------------------------------------------------------------------------------
 input.json
