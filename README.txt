@@ -1,4 +1,4 @@
-**lot and spot can be used exchangeably 
+**the words lot and spot can be used exchangeably 
 
 queueGenerator.js
 	calls functions in brooklynRoutingAlgoirthm.js
@@ -10,6 +10,7 @@ queueGenerator.js
 		a line of what was generated and called is outputted to the console
 --------------------------------------------------------------------------------------------------------------------------------
 brooklynRoutingAlgorithm.js
+	there are a lot of excess outputs to the screen for explanation purposes that can be removed if needed
 	has a http server set up
 	reads data from files
 	outputs data to the same files & to the console
@@ -121,7 +122,9 @@ input.json
 --------------------------------------------------------------------------------------------------------------------------------
 transaction.json
 	contains the details of each transaction in JSON
-	currently is being written over every time there is a new transaction
+	since the data is being appended into the file everytime
+	the file itself is no longer a JSON file
+	instead, a file with multiple JSON inside
 --------------------------------------------------------------------------------------------------------------------------------
 
 save files to -> \\bcssv001\20.Projects\Clients\Fata\Current Projects\15FAT006 - Fata - Automated Parking System\3_Programs\Routing Algorithms
