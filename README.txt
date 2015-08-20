@@ -112,7 +112,6 @@ listener.js
 		moveTolift(floor)
 			this function selects an lift and drops whatever the shuttle is holding into the lift and sends it to the given floor
 				floor = the floor that the cargo on the shuttle will be moved to
-
 --------------------------------------------------------------------------------------------------------------------------------
 input.json
 	contains the parking spot information for each floor
@@ -122,7 +121,6 @@ input.json
 		"-1" for carID signifies that the spot is empty
 		is only being accessed when init() is called in the brooklynRoutingAlgorithm
 			 there could be an update in this file during the transaction but the function that is currently running for the transaction will not know/have the data
-	
 ----------------------------------------------------------------------------------------------------------------------------------------
 transaction.json
 	contains the details of each transaction in JSON
