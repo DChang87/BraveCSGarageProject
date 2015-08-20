@@ -33,7 +33,7 @@ listener.js
 		these functions call the indirectly-called functions to move the cars
 		these are the functions called directly by the user
 		-------------------------------
-		park(carID,liftID,floor)
+		INPARK(carID,liftID,floor)
 			function called to park a car, no assigned spot, only assigned floor
 				carID = the ID of the car that will be parked (str)
 				liftID = the ID of the lift that will be used for parking (str)
@@ -46,17 +46,19 @@ listener.js
 				floor = the floor in which the car will be parked (the floor that spotIDS is on) (int)
 		moveCarbyCarID(carID,spotIDS,floor)
 			function called to move/shuffle cars, refering to the car by its ID
+			can shuffle floor to floor
 				carID = the car that will be parked (str)
 				spotIDS = string of the ID of the spot in which the car will be parked in (str)
 				floor = the floor that the car will be parked on (the floor that spotIDS is on) (int)
 		moveCarbyspotID(spotID1S,floor1,spotID2S,floor2)
 			variatoin of moveCarbyCarID
 			function aclled to move/shuffle cars, refering to the positions by its IDs instead of the carID in the starting position
+			can shuffle floor to floor
 				spotID1S = string of the ID of the starting spot of this shuffle (this spot should contain a car to shuffle) (str)
 				floor1 = floor of spotID1S (int)
 				spotID2S = string of the ID of the destination spot of the shuffle (this spot should be empty but it is not necessary) (str)
 				floor2 = floor of spotID2S (int)
-		pickUp(carID)
+		OUTPARK(carID)
 			function called to pick up/ outpark a car
 			an lift is selected by the program to move the car
 				carID = the ID of the car that will be parked (str)
