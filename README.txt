@@ -1,5 +1,3 @@
-**the words spot and spot can be used exchangeably 
-
 queueGenerator.js
 	calls functions in brooklynRoutingAlgoirthm.js
 	for loop runs 5 times
