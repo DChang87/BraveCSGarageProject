@@ -15,10 +15,15 @@ brooklyn-final.js
 	has a listener set up
 	reads data from files
 	outputs data to the same files & to the console
+	------------------------------------------------
+	important variables:
+		mydata - saves all the parking spot availability information
+		transactions - saves all the moves in the transaction
 	---------------------
 	general functions:
 		init() 
 			reads the data files and initializes/defines important variables
+			(files are read synchronously)
 			called everytime a directly-called function is called
 		close()
 			writes/appends the data to files and output any necessary information to console
@@ -143,5 +148,6 @@ transaction.json
 	the file itself is no longer a JSON file
 	instead, a file with multiple JSON inside
 --------------------------------------------------------------------------------------------------------------------------------
-
+sender.js
+	sends data to brooklyn-final.js to test the program
 save files to -> \\bcssv001\20.Projects\Clients\Fata\Current Projects\15FAT006 - Fata - Automated Parking System\3_Programs\Routing Algorithms
