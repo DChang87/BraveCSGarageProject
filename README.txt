@@ -85,23 +85,23 @@ brooklyn-final.js
 			this function directly moves the car around, calling move1stCar in certain scenarios for blocking cars
 			this function is called by moveCarbyCarID() and moveCarbyspotID()
 			at the end of this function, relocateCar() is called
-				spotID1S = string ID of the starting spot
-				floor1 =floor of starting spot
-				spotID2S = string ID of the destination spot
-				floor2 = floor of the destionation spot
+				spotID1S = string ID of the starting spot (str)
+				floor1 =floor of starting spot (int)
+				spotID2S = string ID of the destination spot (str)
+				floor2 = floor of the destionation spot (int)
 		move1stCar(ppos,floor,avoid,avoidfloor)
 			this is called by moveCar whenever there is a car blocking another car
 			ppos should be a 2nd car position, this function moves the car blocking ppos to the closest available spot
-				ppos = parking position of the current car
-				floor = floor of ppos
-				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car)
-				avoidfloor = floor of the avoiding spot
+				ppos = parking position of the current car (int)
+				floor = floor of ppos (int)
+				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car) (int)
+				avoidfloor = floor of the avoiding spot (int)
 		moveCartoEmptySpace(ppos,floor,avoid,avoidfloor)
 			the function finds an empty spot using BFS(), calling on ppos, and moves the car in ppos to the spot
-				ppos = parking position of the current car
-				floor = floor of ppos
-				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car)
-				avoidfloor = floor of the avoiding spot
+				ppos = parking position of the current car (int)
+				floor = floor of ppos (int)
+				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car) (int)
+				avoidfloor = floor of the avoiding spot (int)
 		BFS(ppos,floor,avoid,avoidfloor)
 			all of the car choosing is executed in this function
 			this function executes the graph theory algorithm, Breadth First Search, based on the graph created by linking the pspot objects
@@ -109,29 +109,29 @@ brooklyn-final.js
 			there are certain spots that BFS must avoid because when shuffling cars, there are certain reserved destination spots that other cars must not park into (ex. in moveCar(), any blocking cars cannot be moved to block spotID1S or spotID2S) thus the parking spots are checked against the avoiding spots before being returned by the function
 			returns -1 if no spots are available
 			it ignores any of the ignored spots during the search so a car doesn't park over the spot of another car
-				ppos = parking position of the current car
-				floor = floor of ppos
-				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car)
-				avoidfloor = floor of the avoiding spot
+				ppos = parking position of the current car (int)
+				floor = floor of ppos (int)
+				avoid = the spot the should be avoided when determining the closest empty spot (ex. this spot is the destination spot for another car) (int)
+				avoidfloor = floor of the avoiding spot (int)
 		relocateCar(spotID1,floor1,spotID2,floor2)
 			no extra cars are moved under this function, only values are swapped
 			this function does the final swapping of the car
 			it relocates the car from spotID1 to spotID2
 			it directly accesses mydata and changes the values of the car in the spots
 			this function is often called at the end of the other indirectly-called functions
-				spotID1S = string ID of the starting spot
-				floor1 =floor of starting spot
-				spotID2S = string ID of the destination spot
-				floor2 = floor of the destionation spot
+				spotID1S = string ID of the starting spot (str)
+				floor1 =floor of starting spot (int)
+				spotID2S = string ID of the destination spot (str)
+				floor2 = floor of the destionation spot (int)
 		removeCar(spotID,carID,floor)
 			this function removes the car from the data/system and sends it to the lift by calling moveTolift()
-				spotID = spot of the car that will be removed
-				carID = the ID of the car to be removed
-				floor = floor of spotID
+				spotID = spot of the car that will be removed (int)
+				carID = the ID of the car to be removed (str)
+				floor = floor of spotID (int)
 		moveTolift(floor)
 			this function selects a lift and drops whatever the shuttle is holding into the lift and sends it to the given floor
 			(priority is given to L1, if L1 is full, the car is dropped into L2)
-				floor = the floor that the cargo on the shuttle will be moved to (in most cases it would be floor 0, unless a car is being shuffled around between floors)
+				floor = the floor that the cargo on the shuttle will be moved to (in most cases it would be floor 0, unless a car is being shuffled around between floors) (int)
 --------------------------------------------------------------------------------------------------------------------------------
 input.json
 	contains the parking spot information for each floor
